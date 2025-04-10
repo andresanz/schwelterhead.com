@@ -1,8 +1,6 @@
 const markdownIt = require("markdown-it");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
-
-
 module.exports = function(eleventyConfig) {
   // Keep existing markdown and liquid config...
   // (up until the filters section)
@@ -36,8 +34,6 @@ module.exports = function(eleventyConfig) {
   // (until the collections)
 
   eleventyConfig.addGlobalData('localdata', () => require('./_src/_data/siteinfo.json'));
-
-
 
   eleventyConfig.addFilter("relative_url", function(url) {
     if (!url) return '';
