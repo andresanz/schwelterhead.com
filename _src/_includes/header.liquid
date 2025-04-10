@@ -4,22 +4,16 @@
     <p>DEBUG: {{ page.url }}</p>
     <p>DEBUG: {{ siteinfo.baseUrl }}</p>
 
+    <p>
     {% if page.url == '/' %}
       <h1 class="display-6">{{ siteName }}</h1>
       <h3>{{ siteDescription }}</h3>
-    
-    {% elsif page.url == '/contact' %}
-      <h1 class="display-6">Contact</h1>
-      <p>Learn more about what we do.</p>
-    
-    {% elsif page.url == '/posts' %}
-      <h1 class="display-6">Blog Posts</h1>
-      <p>Read our latest updates and articles.</p>
     
     {% else %}
       <h1 class="display-6">Welcome</h1>
       <p>Explore our site!</p>
     {% endif %}
+    </p>
 
     </div>
 </header>
