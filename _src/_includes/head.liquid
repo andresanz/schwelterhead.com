@@ -1,15 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--
-    {%- if page.url == '/' -%}
-    <title>{{ localdata.siteName }}</title>
-    {% else %}
-    <title>{% if title %}{{ title }} &middot; {% endif %}{{ localdata.siteName }}</title>
-    {% endif %}
-    -->
-
+    
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&family=Lato:wght@400;700&family=Montserrat:wght@400;600&display=swap"
@@ -38,8 +30,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Andre Sanz" />
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-
-    {% comment %}Google site analytics, with code stored in _src/data/siteinfo,json {% endcomment %}
 
     {% if site.googleAnalytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalytics }}"></script>
