@@ -1,6 +1,9 @@
 <header class="site-header">
     <div class="container">
       
+    <p>DEBUG: {{ page.url }}</p>
+    <p>DEBUG: {{ site.url }}</p>
+
     {% if page.url contains '' %}
       <h1 class="display-6">{{ siteName }}</h1>
       <h3>{{ siteDescription }}</h3>
