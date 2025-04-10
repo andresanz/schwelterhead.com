@@ -1,17 +1,24 @@
 <header class="site-header">
     <div class="container">
 
-        {% if title == "Home" %}
+        {% if page.url contains '/posts' %}
         <h1 class="display-6">{{ localdata.siteName | default: localdata.siteName }}</h1>
-        <h3>{{ localdata.siteDescription | default: localdata.siteDescription }}</h3>
 
         {% else %}
     
-        <h1 class="display-6">{{ localdata.siteName | default: localdata.siteName }} &middot; {{ title }}</h1> 
-            </h1>
+        <h1 class="display-6">{{ localdata.siteName | default: localdata.siteName }}</h1>
+        <h3>{{ localdata.siteDescription | default: localdata.siteDescription }}</h3>
        
         {% endif %}
 
     </div>
 </header>
+
+<!--
+    {%- if page.url == '/' -%}
+    <title>{{ localdata.siteName }}</title>
+    {% else %}
+    <title>{% if title %}{{ title }} &middot; {% endif %}{{ localdata.siteName }}</title>
+    {% endif %}
+    -->
 
