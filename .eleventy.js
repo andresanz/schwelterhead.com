@@ -28,6 +28,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_src/assets");
   eleventyConfig.addPassthroughCopy("_src/private/.htaccess");
   eleventyConfig.addPassthroughCopy("_src/.htaccess");
+  eleventyConfig.addPassthroughCopy("CNAME");
+
 
   // Keep global data and asset handling...
   // (until the collections)
