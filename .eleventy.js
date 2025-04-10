@@ -2,10 +2,16 @@ const markdownIt = require("markdown-it");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 
+
 module.exports = function(eleventyConfig) {
   // Keep existing markdown and liquid config...
   // (up until the filters section)
   eleventyConfig.addPlugin(pluginRss);
+
+  eleventyConfig.addFilter("startsWith", function(value, search) {
+    if (!value) return false;
+    return value.startsWith(search);
+  });
 
   // Add absoluteUrl filter
   eleventyConfig.addFilter('absoluteUrl', function(url, base) {
