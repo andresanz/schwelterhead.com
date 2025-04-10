@@ -2,12 +2,12 @@
     <div class="container">
 
         {% if title == "Home" %}
-        <h1 class="display-6">{{ localdata.author.name | default: localdata.siteName }}</h1>
+        <h1 class="display-6">{{ localdata.siteName | default: localdata.siteName }}</h1>
         <h3>{{ localdata.siteDescription | default: localdata.siteDescription }}</h3>
 
         {% else %}
     
-        <h1 class="display-6">{{ localdata.author.name | default: localdata.siteName }}</h1> &middot; [[ title ]]
+        <h1 class="display-6">{{ localdata.siteName | default: localdata.siteName }}</h1> &middot; {{ title }}
             </h1>
        
         {% endif %}
