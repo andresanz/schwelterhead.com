@@ -8,6 +8,7 @@ pagination:
   reverse: true
 permalink: "posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber | plus: 1 }}/{% endif %}"
 ---
+    {%- include 'metadata.liquid' -%}
 
 <div class="post-list">
     {% for post in posts %}
