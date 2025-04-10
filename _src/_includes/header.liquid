@@ -1,17 +1,18 @@
 <header class="site-header">
     <div class="container">
       
+    <!--
     <p>DEBUG: {{ page.url }}</p>
     <p>DEBUG: {{ siteinfo.baseUrl }}</p>
+    -->
 
     <p>
     {% if page.url == '/' %}
-      <h1 class="display-6">homepage</h1>
+      <h1 class="display-6">{{ siteinfo.siteName }}</h1>
       <h3>{{ siteinfo.siteDescription }}</h3>
     
     {% else %}
-      <h1 class="display-6">Welcome</h1>
-      <p>Explore our site!</p>
+    <h1 class="display-6">{{ siteinfo.siteName }}</h1>
     {% endif %}
     </p>
 
