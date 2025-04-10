@@ -1,21 +1,22 @@
 <header class="site-header">
     <div class="container">
-      {% if page.url == '/' %}
-        <h1 class="display-6">{{ siteName }}</h1>
-        <h3>{{ siteDescription }}</h3>
       
-      {% elsif (page.url | slice: (0..5)) == '/about' %}
-        <h1 class="display-6">About Us</h1>
-        <p>Learn more about what we do.</p>
-      
-      {% elsif (page.url | slice: (0..5)) == '/posts' %}
-        <h1 class="display-6">Blog Posts</h1>
-        <p>Read our latest updates and articles.</p>
-      
-      {% else %}
-        <h1 class="display-6">Welcome</h1>
-        <p>Explore our site!</p>
-      {% endif %}
+    {% if page.url == '/' %}
+      <h1 class="display-6">{{ siteName }}</h1>
+      <h3>{{ siteDescription }}</h3>
+    
+    {% elsif page.url contains '/about' %}
+      <h1 class="display-6">About Us</h1>
+      <p>Learn more about what we do.</p>
+    
+    {% elsif page.url contains '/posts' %}
+      <h1 class="display-6">Blog Posts</h1>
+      <p>Read our latest updates and articles.</p>
+    
+    {% else %}
+      <h1 class="display-6">Welcome</h1>
+      <p>Explore our site!</p>
+    {% endif %}
 
     </div>
 </header>

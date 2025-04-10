@@ -8,11 +8,6 @@ module.exports = function(eleventyConfig) {
   // (up until the filters section)
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addFilter("startsWith", function(value, search) {
-    if (!value) return false;
-    return value.startsWith(search);
-  });
-
   // Add absoluteUrl filter
   eleventyConfig.addFilter('absoluteUrl', function(url, base) {
     try {
