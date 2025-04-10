@@ -1,7 +1,7 @@
 <header class="site-header">
     <div class="container">
 
-        {% if page.url contains '/posts' %}
+        {% if page.url contains '/posts' or page.url contains '/about' %}
         <h1 class="display-6">{{ localdata.siteName | default: localdata.siteName }}</h1>
 
         {% else %}
