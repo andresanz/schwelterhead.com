@@ -3,6 +3,9 @@ git add .
 git commit -m "commit comment"
 git push origin main
 
+git remote add origin https://github.com/andresanz/schwelterhead.com.git
+git remote set-url origin git@github.com:andresanz/schwelterhead.com.git
+
 npm install -g gh-pages
 
 "scripts": {

@@ -1,3 +1,3 @@
-## Topic 1 ##
+# schwelterhead.com
 
-run "thumbs.sh" to generate.  must be in 11ty site root.# schwelterhead.com
+run thumbs.sh to generate.  must be in 11ty site root.
