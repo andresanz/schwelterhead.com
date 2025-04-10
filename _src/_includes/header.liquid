@@ -11,6 +11,9 @@
     
     {% elsif page.url == '/posts/' %}
       <p>Our posts listed.</p>
+
+      {% elsif page.url == '/posts/tags/' %}
+        <p>Our posts/tags listed.</p>
     
     {% elsif page.url contains '/posts/' %}
       <h1>You're viewing a blog post!</h1>
