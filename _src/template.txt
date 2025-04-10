@@ -1,0 +1,57 @@
+{% comment %}
+---
+layout: layouts/base.html
+date: 2024-10-22
+date-modified: 
+title: 
+description: 
+category: [GRC]
+tags: [SOC1, Audit]
+excerpt: 
+feature-image: false
+feature-image-width: 
+feature-image-height: 
+thumbnail-image: false
+thumbnail-image-width: 
+thumbnail-image-height: 
+---
+{%- include 'metadata.liquid' -%}
+
+<div class="text-center">
+    <a href="/assets/images/private/sam-jets.png"><img src="/assets/images/private/thumbnails/thumb_sam-jets.png" class="img-thumbnail" style="margin-right: 0; margin-top: 0;" width="35%"></a>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col" style="text-align: center">
+      <a href="/assets/images/pencil.png" class="text-decoration-none">
+        <img src="/assets/images/thumbnails/thumb_pencil.png" alt="Description" style="border: 1px solid lightgrey; width: 70%">
+              <div class="pt-2 mt-0 text-muted" style="text-align: center;">Description</div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <!-- First image -->
+        <div class="col-12 col-lg-6 mb-4 text-center">
+            <img src="your-image1.jpg" class="img-fluid" alt="Image 1">
+        </div>
+        <!-- Second image -->
+        <div class="col-12 col-lg-6 mb-4 text-center">
+            <img src="your-image2.jpg" class="img-fluid" alt="Image 2">
+        </div>
+    </div>
+</div>
+{%- include 'feature-image.liquid' -%}
+{%- include 'back-to-top.liquid' -%}
+
+{% endcomment %}
+

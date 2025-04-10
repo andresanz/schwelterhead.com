@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container position-relative">
+        <button class="navbar-toggler position-absolute end-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="margin-top: 36px;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="/">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link {% if page.url contains '/posts/' %}active{% endif %}" href="/posts">Posts</a>
+                </li>
+
+                <li class="nav-item">
+                    {% if page.url contains '/posts/' %}
+                    <a class="nav-link ps-0 fw-lighter" href="/posts/tags"> [tags]</a>
+                    {% endif %}
+                </li>
+
+                {%- comment -%}
+
+                 <li class="nav-item">
+                    <a class="nav-link {% if page.url contains '/private/' %}active{% endif %}" href="/private">Private</a>
+                </li>
+
+                <li class="nav-item">
+                    {% if page.url contains '/private/' %}
+                    <a class="nav-link ps-0 fw-lighter" href="/private/tags"> [tags]</a>
+                    {% endif %}
+                </li>
+
+                {%- endcomment -%}
+
+                <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/resume/' %}active{% endif %}" href="/resume">Resume</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/links/' %}active{% endif %}" href="/links">Links</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/contact/' %}active{% endif %}" href="/contact">Contact</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="/about">About</a>
+                </li>
+            </ul>
+            <div class="nav-item">
+               <a class="nav-link {% if page.url contains '/secure/' %}active{% endif %}" href="/secure" style="font-size: 1.2rem;"><i class="fa-solid fa-lock"></i></a>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

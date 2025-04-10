@@ -1,0 +1,22 @@
+---
+layout: layouts/base.html
+title: Private Tags
+---
+<div class="container">
+    <h1 class="mb-4">Private Tags</h1>
+    <div class="row">
+        <div class="col">
+            <ul>
+                {% assign sorted_tags = collections.privateTags | sort_natural %}
+                {% for tag in sorted_tags %}
+                    <li>
+                        <a href="/private/tags/{{ tag }}/" class="text-decoration-none">
+                            {{ tag | replace: "-", " " | capitalize }}
+                        </a>
+                        <span class="text-muted ms-2">({{ collections.private | postsWithTag: tag }})</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

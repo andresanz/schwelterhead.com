@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+    {% include 'head.liquid' %}
+    <body>
+
+
+        <div class="site-container">
+
+        <div class="header-container">
+        {% include 'header.liquid' %}
+        </div>
+
+        <div class="navigation-container">
+        {% include 'navigation.liquid' %}
+        </div>
+        
+        <main class="content-container">
+           {{ content }}
+        </main>
+        
+        <div class="footer-container">
+        {% include 'footer.liquid' %}
+        </div>
+    </div>
+
+
+    </body>
+</html>

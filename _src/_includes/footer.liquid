@@ -1,0 +1,54 @@
+<style>
+  footer a,
+  footer .footer-social,
+  footer .copyright {
+    color: grey;
+    font-size: .95em;
+
+  }
+</style>
+<!--
+<footer>
+  <div class="footer-social">
+    <a href="{{ localdata.socialMedia.github }}" target="_blank" rel="noopener" aria-label="GitHub"
+      class="text-decoration-none">Github</a> •
+    <a href="{{ localdata.socialMedia.twitter }}" target="_blank" rel="noopener" aria-label="Twitter"
+      class="text-decoration-none">Twitter</a> •
+    <a href="{{ localdata.socialMedia.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"
+      class="text-decoration-none">LinkedIn</a>
+  </div>
+  <p class="copyright">&copy; {{ "now" | date: "%Y" }} <a href="/contact/" class="text-decoration-none">{{ localdata.siteName }}</a></p>
+</footer>-->
+
+
+    <style>
+        .social-icons a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<footer class="pt-1 pb-1 mt-auto">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Copyright Section -->
+            <div class="col-md-6 text-center text-md-start copyright pb-2">
+                <span class="text-muted"><a href="/contact" class=" text-decoration-none">&copy; {{ "now" | date: "%Y" }} {{ localdata.siteName }}</a></span>
+            </div>
+            <!-- Social Icons Section -->
+            <div class="col-md-6 text-center text-md-end social-icons footer-social pb-2">
+                <a href="{{ localdata.socialMedia.github }}" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                <a href="{{ localdata.socialMedia.linkedin }}" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="{{ localdata.socialMedia.twitter }}" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="/contact" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>

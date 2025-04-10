@@ -1,0 +1,62 @@
+---
+layout: layouts/base.html
+title: Private Posts
+pagination:
+  data: collections.private
+  size: 5
+  alias: posts
+  reverse: true
+permalink: "private/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber | plus: 1 }}/{% endif %}"
+---
+
+<div class="post-list">
+    {% for post in posts %}
+    <article class="post-thumbnail" style="padding: 12px 0px 12px 0px;">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="{{ post.url }}" class="text-decoration-none">
+                    {% if post.data.thumbnail-image %}
+                    <img src="{{ post.data.thumbnail-image }}" 
+                         width="{{ post.data.thumbnail-image-width }}" 
+                         height="{{ post.data.thumbnail-image-height }}" 
+                         alt="{{ post.data.thumbnail-image-alt | default: post.data.title }}"
+                         class="img-fluid thumbnail">
+                    {% else %}
+                    <img src="https://placehold.co/{{ post.data.thumbnail-image-width | default: 200 }}x{{ post.data.thumbnail-image-height | default: 200 }}"
+                         width="{{ post.data.thumbnail-image-width | default: 200 }}"
+                         height="{{ post.data.thumbnail-height | default: 200 }}"
+                         alt="Post thumbnail placeholder"
+                         class="img-fluid thumbnail">
+                    {% endif %}
+                </a>
+            </div>
+            <div class="col-md-9">
+                <h2><a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a></h2>
+                {% if post.data.subtitle %}
+                <h3>{{ post.data.subtitle }}</h3>
+                {% endif %}
+                <div class="post-meta">
+                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                        {{ post.date | date: "%B %d, %Y" }}
+                    </time>
+                    {% if post.data.tags %}
+                    <div class="tags">
+                        {%- assign filtered_tags = post.data.tags | where_exp: "tag", "tag.url != 'private'" -%}
+                        {%- for tag in filtered_tags -%}
+                            <a href="/private/tags/{{ tag.url }}/" class="tag text-decoration-none">{{ tag.display }}</a>{% unless forloop.last %}, {% endunless %}
+                        {%- endfor -%}
+                    </div>
+                    {% endif %}
+                </div>
+                {% if post.data.excerpt %}
+                <div class="post-excerpt">
+                    {{ post.data.excerpt | truncate: 150 }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+{% include 'pagination.liquid' %}
