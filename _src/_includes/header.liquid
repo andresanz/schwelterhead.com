@@ -1,0 +1,27 @@
+<header class="site-header">
+    <div class="container">
+      
+    <!--
+    <p>DEBUG: {{ page.url }}</p>
+    <p>DEBUG: {{ siteinfo.baseUrl }}</p>
+    -->
+
+    {% if page.url == '/contact/' %}
+      <p>Contact us page content here.</p>
+    
+    {% elsif page.url == '/posts/' %}
+      <p>Our posts listed.</p>
+
+      {% elsif page.url == '/posts/tags/' %}
+        <p>Our posts/tags listed.</p>
+    
+    {% elsif page.url contains '/posts/' %}
+      <h1>You're viewing a blog post!</h1>
+    
+    
+    {% else %}
+      <p>Default content for other pages.</p>
+    {% endif %}
+    </div>
+</header>
+

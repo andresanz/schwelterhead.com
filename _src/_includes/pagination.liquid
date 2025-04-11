@@ -1,0 +1,109 @@
+{% if pagination.pages.length > 1 %}
+    <div class="pagination-container">
+        <nav class="pagination" role="navigation" aria-label="Pagination">
+            <ul class="pagination__list">
+                <!-- Previous page -->
+                {% if pagination.href.previous %}
+                <li>
+                    <a href="{{ pagination.href.previous }}" 
+                       class="pagination__link"
+                       aria-label="Previous page">
+                        ← Previous
+                    </a>
+                </li>
+                {% else %}
+                <li>
+                    <span class="pagination__link pagination__link--disabled">
+                        ← Previous
+                    </span>
+                </li>
+                {% endif %}
+    
+                <!-- Page numbers -->
+                {% for pageEntry in pagination.pages %}
+                    {% assign pageNumber = forloop.index %}
+                    <li>
+                        {% if page.url == pagination.hrefs[forloop.index0] %}
+                        <span class="pagination__link pagination__link--current" 
+                              aria-current="page">
+                            {{ pageNumber }}
+                        </span>
+                        {% else %}
+                        <a href="{{ pagination.hrefs[forloop.index0] }}" 
+                           class="pagination__link">
+                            {{ pageNumber }}
+                        </a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+    
+                <!-- Next page -->
+                {% if pagination.href.next %}
+                <li>
+                    <a href="{{ pagination.href.next }}" 
+                       class="pagination__link"
+                       aria-label="Next page">
+                        Next →
+                    </a>
+                </li>
+                {% else %}
+                <li>
+                    <span class="pagination__link pagination__link--disabled">
+                        Next →
+                    </span>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    
+    <style>
+    .pagination-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1.5rem auto 0.5rem;
+        max-width: 800px;
+    }
+    
+    .pagination__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .pagination__link {
+        color: #666;
+        text-decoration: none;
+        padding: 0.25rem;
+    }
+    
+    .pagination__link:hover:not(.pagination__link--disabled):not(.pagination__link--current) {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .pagination__link--current {
+        color: #000;
+        font-weight: 500;
+    }
+    
+    .pagination__link--disabled {
+        color: #999;
+        pointer-events: none;
+    }
+    
+    @media (max-width: 576px) {
+        .pagination__list {
+            gap: 0.75rem;
+            font-size: 0.85rem;
+        }
+    }
+    </style>
+    {% endif %}

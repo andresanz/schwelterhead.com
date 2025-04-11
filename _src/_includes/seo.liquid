@@ -1,0 +1,17 @@
+{%- assign pageTitle = title | default: metadata.title -%}
+{%- assign pageDescription = description | default: metadata.description -%}
+{%- assign pageImage = image | default: metadata.defaultImage -%}
+{%- assign pageUrl = metadata.url | append: page.url -%}
+
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDescription }}">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:image" content="{{ metadata.url }}{{ pageImage }}">
+<meta property="og:url" content="{{ pageUrl }}">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ pageTitle }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:image" content="{{ metadata.url }}{{ pageImage }}">
+<link rel="canonical" href="{{ pageUrl }}">

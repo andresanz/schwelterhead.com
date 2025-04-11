@@ -1,0 +1,20 @@
+{
+  "googleAnalytics": "G-ZMHRWTT18V",
+  "siteName": "Schwelterhead.com",
+  "siteDescription": "A place for my stuff",
+  "baseUrl": "https://schwelterhead.com",
+  "author": {
+    "name": "Andr&eacute; Sanz",
+    "email": "sanz.andre@gmail.com",
+    "twitter": "@nine14dotio"
+  },
+    "socialMedia": {
+    "twitter": "https://x.com/nine14dotio",
+    "github": "https://github.com/andresanz",
+    "linkedin": "https://linkedin.com/in/andresanz"
+  },
+  "buildInfo": {
+    "environment": "production",
+    "version": "1.0.0"
+  }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://schwelterhead.com/sitemap.xml

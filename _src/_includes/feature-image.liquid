@@ -1,0 +1,25 @@
+{% if feature-image %}
+    <div class="feature-image-container position-relative">
+        <img src="{{ feature-image }}" 
+             width="{{ feature-image-width | default: '100%' }}"
+             height="{{ feature-image-height | default: 'auto' }}"
+             alt="{{ post.data.title }}"
+             class="w-100 object-cover rounded-lg shadow-sm"
+             style="{% if feature-image-height %}height: {{ feature-image-height }}px;{% else %}aspect-ratio: 16/9;{% endif %}">
+
+        {% comment %}
+             <!-- <div class="position-absolute bottom-0 start-0 w-100 p-4 bg-gradient-to-t from-black/70 to-transparent"> -->
+        <!--
+        <div class="position-absolute top-0 start-0 w-100 p-4 bg-gradient-to-t to-black/70 from-transparent">
+           <h1 class="text-white mb-0">{{ title }}</h1>
+             {% if post.data.subtitle %}            
+            <p class="text-white-75 mb-0">{{ subtitle }}</p>
+            {% endif %}
+        </div>
+        -->
+        {% endcomment %}
+    </div>
+    {% endif %}
+
+    
+        

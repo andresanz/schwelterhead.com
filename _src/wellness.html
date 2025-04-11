@@ -1,0 +1,151 @@
+---
+layout: layouts/base.html
+title: Wellness Tracking
+---
+{%- include 'metadata.liquid' -%}
+<p>Every entry here should have an entry in the <span style="color: green;">green book</span></p>
+<html>
+<head>
+    <style>
+        .chart-container {
+            margin: 20px 0;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="chart-container">
+        <canvas id="trendsChart"></canvas>
+    </div>
+
+    <script>
+        // Data in date,energy,motivation,followthrough,stress format
+        const rawData = `
+Jan 1,3,4,3,3
+Jan 2,4,4,3,2
+Jan 3,3,3,4,3
+Jan 4,5,5,4,2
+Jan 5,4,4,5,1
+Jan 30,3,3,3,3`;
+
+        // Parse the data
+        const rows = rawData.trim().split('\n').map(row => row.trim().split(','));
+        
+        // Extract data into separate arrays
+        const data = {
+            dates: rows.map(row => row[0]),
+            energy: rows.map(row => Number(row[1])),
+            motivation: rows.map(row => Number(row[2])),
+            followThrough: rows.map(row => Number(row[3])),
+            stress: rows.map(row => Number(row[4]))
+        };
+
+        Chart.defaults.font.size = 14;
+
+        const ctx = document.getElementById('trendsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: data.dates,
+                datasets: [
+                    {
+                        label: 'Energy',
+                        data: data.energy,
+                        borderColor: '#FF6384',
+                        backgroundColor: '#FF6384',
+                        tension: 0.1,
+                        borderWidth: 3,
+                        fill: false,
+                        pointStyle: 'circle',
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    },
+                    {
+                        label: 'Motivation',
+                        data: data.motivation,
+                        borderColor: '#36A2EB',
+                        backgroundColor: '#36A2EB',
+                        tension: 0.1,
+                        borderWidth: 3,
+                        fill: false,
+                        pointStyle: 'circle',
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    },
+                    {
+                        label: 'Follow-through',
+                        data: data.followThrough,
+                        borderColor: '#4BC0C0',
+                        backgroundColor: '#4BC0C0',
+                        tension: 0.1,
+                        borderWidth: 3,
+                        fill: false,
+                        pointStyle: 'circle',
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    },
+                    {
+                        label: 'Stress',
+                        data: data.stress,
+                        borderColor: '#FF9F40',
+                        backgroundColor: '#FF9F40',
+                        tension: 0.1,
+                        borderWidth: 3,
+                        fill: false,
+                        pointStyle: 'circle',
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 6,
+                        ticks: {
+                            stepSize: 1,
+                            font: {
+                                size: 16
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Rating (5 best, 1 worst)',
+                            font: {
+                                size: 18
+                            }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: false,
+                        text: 'Wellness Trends Over Time',
+                        font: {
+                            size: 24
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

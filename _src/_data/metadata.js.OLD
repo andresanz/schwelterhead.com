@@ -1,0 +1,11 @@
+module.exports = {
+    title: "Your Site Name",
+    description: "Your site description",
+    url: "https://yourdomain.com",
+    author: {
+      name: "Your Name",
+      email: "your@email.com"
+    },
+    defaultImage: "/images/default-social.jpg",
+    language: "en"
+  };

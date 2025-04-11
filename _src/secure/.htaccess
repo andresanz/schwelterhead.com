@@ -1,0 +1,5 @@
+# Enable Basic Authentication
+AuthType Basic
+AuthName "Restricted Access"
+AuthUserFile /var/.htpasswd-secure
+Require valid-user

@@ -1,0 +1,25 @@
+---
+layout: layouts/base.html
+title: Contact
+---
+
+<p style="text-align: start;" class="mt-0 text-muted"><span style="color: red; font-weight: bold;">Please Note:</span> this contact form submission will be forwarded to <a class="text-decoration-none" href="https://formspree.io" target="_blank">formspree.io</a> for processing.</p>
+
+<form action="https://formspree.io/f/xwppldjo" method="POST" class="contact-form">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="_replyto" required>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+    </div>
+   
+    <button type="submit" class="btn btn-primary mb-2">Send Message</button>
+</form>
+
+<script src="/assets/js/reset-form.js"></script>

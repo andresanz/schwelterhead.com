@@ -1,0 +1,33 @@
+---
+layout: layouts/base.html
+title: Resume
+permalink: /resume/
+resume-redirect: https://drive.google.com/file/d/1PRgLf28oWW1Jp0tMfJStfy41mg4I6JHd/view?usp=sharing
+---
+
+{%- include 'metadata.liquid' -%}
+
+<p>
+  Redirecting to
+  <a class="text-decoration-none" href="{{ resume-redirect }}" target="_blank">
+    my resume </a> on Google Drive in <span id="countdown">5</span> seconds
+</p>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let seconds = 5;
+    const redirectUrl = '{{ resume-redirect }}';
+    
+    function countdown() {
+      if (seconds < 0) {
+        window.location.href = redirectUrl;
+      } else {
+        document.getElementById("countdown").textContent = seconds;
+        seconds--;
+        setTimeout(countdown, 1000);
+      }
+    }
+    
+    countdown();
+  });
+</script>
