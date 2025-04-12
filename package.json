@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "entities": "^6.0.0",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "js-yaml": "^4.1.0"
   },
   "description": "run \"thumbs.sh\" to generate.  must be in 11ty site root.",
   "main": ".eleventy.js",
