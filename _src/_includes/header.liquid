@@ -7,20 +7,29 @@
     -->
 
     {% if page.url == '/contact/' %}
-      <p>Contact us page content here.</p>
-    
+      <h1>{{ siteinfo.siteName }}</h1>
+      <h4>Contact</h4>    
+
     {% elsif page.url == '/posts/' %}
-      <p>Our posts listed.</p>
+      <h1>{{ siteinfo.siteName }}</h1>
+      <h4>Posts</h4>
 
       {% elsif page.url == '/posts/tags/' %}
-        <p>Our posts/tags listed.</p>
+        <h1>{{ siteinfo.siteName }}</h1>
+        <h4>Posts > Tags</h4>
+        
     
     {% elsif page.url contains '/posts/' %}
-      <h1>You're viewing a blog post!</h1>
+      <h1>{{ siteinfo.siteName }}</h1>
+      <h4><b>Post:</b> {{ title }}</h4>
+
+      {% elsif page.url == '/' %}
+        <h1>{{ siteinfo.siteName }}</h1>
     
     
     {% else %}
-      <p>C H A N G E</p>
+      <h1>{{ siteinfo.siteName }}</h1>
+      <h4>{{ title }}</h4>
     {% endif %}
     </div>
 </header>
