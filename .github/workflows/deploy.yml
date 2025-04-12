@@ -3,29 +3,33 @@ name: Deploy 11ty to GitHub Pages
 on:
   push:
     branches:
-      - main  # Run on push to main branch
+      - main    # Trigger deploys only when pushing to main
+  workflow_dispatch:   # Allow manual deploys from GitHub UI
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: 🛎️ Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
+      - name: 🛠️ Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'   # Or whatever version you're using
 
-    - name: Install Dependencies
-      run: npm install
+      - name: 📦 Install dependencies
+        run: npm install
 
-    - name: Build 11ty site
-      run: npx @11ty/eleventy
+      - name: 🏗️ Build the site
+        run: npx @11ty/eleventy
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          commit_message: "Deploy 11ty site: ${{ github.sha }}"
+          clean: true   # <== Clean old files before deploy
