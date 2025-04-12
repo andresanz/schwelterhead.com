@@ -10,6 +10,7 @@
     "deploy": "npm run build && npx gh-pages -d _site"
   },
   "dependencies": {
+    "entities": "^6.0.0",
     "express": "^4.21.2"
   },
   "description": "run \"thumbs.sh\" to generate.  must be in 11ty site root.",
