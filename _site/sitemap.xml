@@ -92,96 +92,6 @@
   
   
   <url>
-    <loc>undefined/posts/</loc>
-    
-    <lastmod>2025-01-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
-    <loc>undefined/private/</loc>
-    
-    <lastmod>2025-01-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
-    <loc>undefined/posts/tags/</loc>
-    
-    <lastmod>2025-01-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
-    <loc>undefined/private/tags/</loc>
-    
-    <lastmod>2025-01-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
-    <loc>undefined/</loc>
-    
-    <lastmod>2025-01-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
-    <loc>undefined/posts/tags/attention/</loc>
-    
-    <lastmod>2025-01-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
-    <loc>undefined/private/tags/hot/</loc>
-    
-    <lastmod>2025-01-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
-    <loc>undefined/contact/</loc>
-    
-    <lastmod>2025-01-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
-    <loc>undefined/links/</loc>
-    
-    <lastmod>2025-01-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
-    <loc>undefined/resume/</loc>
-    
-    <lastmod>2025-01-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  
-  <url>
     <loc>undefined/posts/2025-01-25-finding-the-perfect-bar/</loc>
     
     <lastmod>2025-01-24</lastmod>
@@ -229,16 +139,97 @@
   <url>
     <loc>undefined/about/</loc>
     
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-04-11</lastmod>
     
     <changefreq>monthly</changefreq>
   </url>
   
   
   <url>
-    <loc>undefined/wellness/</loc>
+    <loc>undefined/contact/</loc>
     
-    <lastmod>2025-01-29</lastmod>
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/links/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/posts/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/posts/tags/attention/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/posts/tags/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/private/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/private/tags/hot/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/private/tags/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/resume/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
     
     <changefreq>monthly</changefreq>
   </url>
@@ -247,7 +238,16 @@
   <url>
     <loc>undefined/secure/</loc>
     
-    <lastmod>2025-01-30</lastmod>
+    <lastmod>2025-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  
+  <url>
+    <loc>undefined/wellness/</loc>
+    
+    <lastmod>2025-04-11</lastmod>
     
     <changefreq>monthly</changefreq>
   </url>
