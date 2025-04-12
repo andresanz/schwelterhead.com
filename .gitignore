@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+
+# Build output
+_site/
+dist/
+build/
+
+# Cache
+.cache/
+.eleventy/
+
+# Environment files
+.env
+.env.*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Markdown files containing HTML
+*.md.html
+*/*.md.html
+**/*.md.html
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local development
+*.local
